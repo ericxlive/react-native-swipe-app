@@ -3,9 +3,8 @@ import { View, Animated } from 'react-native';
 
 class Ball extends Component {
 
-    componentWillMount(){
-        //super () // Issue: 'this' is not allowed before super().
-
+    constructor(){
+        super () // Issue: 'this' is not allowed before super().
         this.position = new Animated.ValueXY(0, 0);
         Animated.spring(this.position, {
             toValue: { x: 200, y: 500 }
